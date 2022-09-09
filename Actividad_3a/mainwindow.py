@@ -20,6 +20,7 @@ class MainWindow(QMainWindow):#generamos la clase mainwindow para que esta adqui
             self.bar_4.setValue(cnt)
         if index==5:
             self.bar_5.setValue(cnt)
+        
 
 
 
