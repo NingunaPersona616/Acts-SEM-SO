@@ -7,22 +7,26 @@ from PyQt5 import QtCore
 #funciones que setean el valor del proceso, puede ser corriendo o denetnido
 
 
-def setFinished(status):
+def setFinished(status, index):
+    if(index==-1):
+        for i in status:
+            i.setText("Detenido")
+    status[index].setText("Detenido")
 
-    pass
+def setRunning(status, index):
+    status[index].setText("Corriendo")
 
-def setRunning(status):
-
-    pass
 
 #funciones para iniciar o detener los hilos de manera individual
 
 def stopOne():
     index=int(endButtons.index(widget.sender()))
+    setFinished(status, index)
     stopThread(widget, index)
     
 def startOne():
     index=int(startButtons.index(widget.sender()))
+    setRunning(status, index)
     startThread(widget, index)
 
 #funciones para enlazar los botones con la funcion
@@ -48,7 +52,7 @@ if __name__ == "__main__":
     startButtons=[widget.start_button_1, widget.start_button_2, widget.start_button_3, widget.start_button_4,]
     #funcion que detenga un hilo indivual
     #1.-funcion para inicio individual, para terminar individual, pausa y resume
-    setFinished(status)
+    setFinished(status, -1)
     linkEndButtons(endButtons)
     linkStartButtons(startButtons)
     widget.thread={}
