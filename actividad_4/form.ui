@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>839</width>
-    <height>400</height>
+    <width>847</width>
+    <height>398</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,7 +47,7 @@
     <widget class="QLabel" name="status_1">
      <property name="geometry">
       <rect>
-       <x>710</x>
+       <x>680</x>
        <y>20</y>
        <width>101</width>
        <height>21</height>
@@ -70,7 +70,7 @@
       <string>Iniciar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="play_1">
+    <widget class="QPushButton" name="play_0">
      <property name="geometry">
       <rect>
        <x>470</x>
@@ -86,7 +86,7 @@
     <widget class="QPushButton" name="kill_1">
      <property name="geometry">
       <rect>
-       <x>590</x>
+       <x>530</x>
        <y>20</y>
        <width>83</width>
        <height>24</height>
@@ -107,19 +107,6 @@
      </property>
      <property name="value">
       <number>0</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pause_1">
-     <property name="geometry">
-      <rect>
-       <x>530</x>
-       <y>20</y>
-       <width>41</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>⏸</string>
      </property>
     </widget>
     <widget class="QLabel" name="proces_1">
@@ -151,7 +138,7 @@
     <widget class="QLabel" name="status_2">
      <property name="geometry">
       <rect>
-       <x>710</x>
+       <x>680</x>
        <y>20</y>
        <width>101</width>
        <height>21</height>
@@ -174,7 +161,7 @@
       <string>Iniciar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="play_2">
+    <widget class="QPushButton" name="play_1">
      <property name="geometry">
       <rect>
        <x>470</x>
@@ -190,7 +177,7 @@
     <widget class="QPushButton" name="kill_2">
      <property name="geometry">
       <rect>
-       <x>590</x>
+       <x>530</x>
        <y>20</y>
        <width>83</width>
        <height>24</height>
@@ -211,19 +198,6 @@
      </property>
      <property name="value">
       <number>0</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pause_2">
-     <property name="geometry">
-      <rect>
-       <x>530</x>
-       <y>20</y>
-       <width>41</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>⏸</string>
      </property>
     </widget>
     <widget class="QLabel" name="proces_2">
@@ -255,7 +229,7 @@
     <widget class="QLabel" name="status_3">
      <property name="geometry">
       <rect>
-       <x>710</x>
+       <x>680</x>
        <y>20</y>
        <width>101</width>
        <height>21</height>
@@ -278,7 +252,7 @@
       <string>Iniciar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="play_3">
+    <widget class="QPushButton" name="play_2">
      <property name="geometry">
       <rect>
        <x>470</x>
@@ -294,7 +268,7 @@
     <widget class="QPushButton" name="kill_3">
      <property name="geometry">
       <rect>
-       <x>590</x>
+       <x>530</x>
        <y>20</y>
        <width>83</width>
        <height>24</height>
@@ -315,19 +289,6 @@
      </property>
      <property name="value">
       <number>0</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pause_3">
-     <property name="geometry">
-      <rect>
-       <x>530</x>
-       <y>20</y>
-       <width>41</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>⏸</string>
      </property>
     </widget>
     <widget class="QLabel" name="proces_3">
@@ -359,7 +320,7 @@
     <widget class="QLabel" name="status_4">
      <property name="geometry">
       <rect>
-       <x>710</x>
+       <x>680</x>
        <y>20</y>
        <width>101</width>
        <height>21</height>
@@ -382,7 +343,7 @@
       <string>Iniciar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="play_4">
+    <widget class="QPushButton" name="play_3">
      <property name="geometry">
       <rect>
        <x>470</x>
@@ -398,7 +359,7 @@
     <widget class="QPushButton" name="kill_4">
      <property name="geometry">
       <rect>
-       <x>590</x>
+       <x>530</x>
        <y>20</y>
        <width>83</width>
        <height>24</height>
@@ -419,19 +380,6 @@
      </property>
      <property name="value">
       <number>0</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pause_4">
-     <property name="geometry">
-      <rect>
-       <x>530</x>
-       <y>20</y>
-       <width>41</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>⏸</string>
      </property>
     </widget>
     <widget class="QLabel" name="proces_4">
@@ -487,7 +435,7 @@
    <widget class="QLabel" name="actions">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>460</x>
       <y>40</y>
       <width>81</width>
       <height>21</height>
@@ -505,7 +453,7 @@
    <widget class="QLabel" name="status_title">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>690</x>
       <y>40</y>
       <width>71</width>
       <height>21</height>
