@@ -32,7 +32,7 @@
      <string>Task Manager</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="block_1">
+   <widget class="QGroupBox" name="block_0">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -96,7 +96,7 @@
       <string>Terminar</string>
      </property>
     </widget>
-    <widget class="QProgressBar" name="bar_1">
+    <widget class="QProgressBar" name="bar_0">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -136,7 +136,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="block_2">
+   <widget class="QGroupBox" name="block_1">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -200,7 +200,7 @@
       <string>Terminar</string>
      </property>
     </widget>
-    <widget class="QProgressBar" name="bar_2">
+    <widget class="QProgressBar" name="bar_1">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -240,7 +240,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="block_3">
+   <widget class="QGroupBox" name="block_2">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -304,7 +304,7 @@
       <string>Terminar</string>
      </property>
     </widget>
-    <widget class="QProgressBar" name="bar_3">
+    <widget class="QProgressBar" name="bar_2">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -344,7 +344,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="block_4">
+   <widget class="QGroupBox" name="block_3">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -408,7 +408,7 @@
       <string>Terminar</string>
      </property>
     </widget>
-    <widget class="QProgressBar" name="bar_4">
+    <widget class="QProgressBar" name="bar_3">
      <property name="geometry">
       <rect>
        <x>120</x>

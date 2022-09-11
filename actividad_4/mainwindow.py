@@ -11,11 +11,11 @@ class MainWindow(QMainWindow):
             cnt=counter#lo igualamos a una variable local
             index=self.sender().index#cachamos el index del thread para saber que barra llenar haciendo match entre barra e hilo
             #esta funcion será llamada varias veces mediante señales y es la que generará la carga visual de las barras segun el hilo que emita la señal
+            if index==0:
+                self.bar_0.setValue(cnt)
             if index==1:
                 self.bar_1.setValue(cnt)
             if index==2:
                 self.bar_2.setValue(cnt)
             if index==3:
                 self.bar_3.setValue(cnt)
-            if index==4:
-                self.bar_4.setValue(cnt)

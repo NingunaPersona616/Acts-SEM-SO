@@ -26,6 +26,7 @@ def stopOne():
     
 def startOne():
     index=int(startButtons.index(widget.sender()))
+    print(index)
     setRunning(status, index)
     startThread(widget, index)
 
@@ -34,7 +35,7 @@ def startOne():
 def linkStartButtons(startButtons):
     for i in startButtons:
         i.clicked.connect(startOne)
-        print("botones de start linkeados")
+    print("botones de start linkeados")
 
 def linkEndButtons(endButtons):
     
