@@ -18,7 +18,7 @@ class threadClass(QtCore.QThread):#la clase threadClass generará un objeto que 
         random=randint(10, 500)#numero random para simular la espera entre procesos
         random2=randint(10, 500)#numero random para simular la espera entre procesos x2
         QtTest.QTest.qWait(random)#llamamos al primer numero random para la espera
-        while not(self.terminate):#ciclo que controlará el envio de señales despues de ser llamado la primera vez en multiprogramming.py, como los procesos correran en un hilo independiente solo es necesario ser mandando señales a dichos hilos
+        while (self.is_running==True):#ciclo que controlará el envio de señales despues de ser llamado la primera vez en multiprogramming.py, como los procesos correran en un hilo independiente solo es necesario ser mandando señales a dichos hilos
             cnt=cnt+5#la barra incrementara segun lo que le sumemos al contador
             self.any_signal.emit(cnt)#emitimos otra señal para que se acumule en la barra de tareas
             QtTest.QTest.qWait(random2)#esperamos otros segundos random
@@ -26,7 +26,7 @@ class threadClass(QtCore.QThread):#la clase threadClass generará un objeto que 
                 cnt=0
                 
 
-
     def stop(self):
         self.terminate=True
+        self.is_running=False
         print(f"stopping thread: {self.index}")

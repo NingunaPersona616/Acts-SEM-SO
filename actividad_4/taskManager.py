@@ -5,7 +5,7 @@ from random import *
 
 
 def startAll(widget):
-    index=1
+    index=0
     random=randint(10, 500)##generamos un numero aleatorio para que haya diferencia de tiempo entre la inicializacion de los procesos
     while(index<5):
         widget.thread[index]=threadClass(parent=None, index=index)#asignamos a una posicion del arreglo un objeto de la clase threadClass que seran nuestros hilos y el objeto adquiere en su atributo index su posicion dentro del arreglo a manera de identificacion
@@ -23,3 +23,15 @@ def stopAll(widget):
     while(index<5):
         widget.thread[index].stop()
         index=index+1
+
+def stopThread(widget, index):
+    widget.thread[index].stop()
+
+def startThread(widget, index):
+    random=randint(10, 500)
+    widget.thread[index]=threadClass(parent=None, index=index)#asignamos a una posicion del arreglo un objeto de la clase threadClass que seran nuestros hilos y el objeto adquiere en su atributo index su posicion dentro del arreglo a manera de identificacion
+    QtTest.QTest.qWait(random)#esperamos un determinado tiempo
+    widget.thread[index].start()#señalizamos que nuestro hilo iniciara su proceso
+    widget.thread[index].any_signal.connect(widget.taskManager)#
+
+    
