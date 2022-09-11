@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>839</width>
-    <height>467</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -448,19 +448,6 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="start_all">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>400</y>
-      <width>101</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Iniciar Todos</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="name">
     <property name="geometry">
      <rect>
@@ -531,19 +518,6 @@
     </property>
     <property name="text">
      <string>Estatus</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="stop_all">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>400</y>
-      <width>101</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Detener Todos</string>
     </property>
    </widget>
   </widget>

@@ -4,43 +4,39 @@ from PyQt5.QtWidgets import QApplication
 from taskManager import *
 from PyQt5 import QtCore
 
-def beginAll():
-    startAll(widget)
-    setRunning(status)
-
-def endAll ():
-    stopAll(widget)
-    setFinished(status)
+#funciones que setean el valor del proceso, puede ser corriendo o denetnido
 
 
 def setFinished(status):
-    for i in status:
-        i.setText("Detenido")
+
+    pass
 
 def setRunning(status):
-    for i in status:
-        i.setText("Corriendo")
 
-def linkEndButtons(endButtons):
-    
-    for i in endButtons:
-        i.clicked.connect(stopOne)#aqui va la funcion para terminarde manera individual
-        
-    print("botones de terminar linkeados")
+    pass
+
+#funciones para iniciar o detener los hilos de manera individual
 
 def stopOne():
     index=int(endButtons.index(widget.sender()))
     stopThread(widget, index)
     
+def startOne():
+    index=int(startButtons.index(widget.sender()))
+    startThread(widget, index)
+
+#funciones para enlazar los botones con la funcion
     
 def linkStartButtons(startButtons):
     for i in startButtons:
         i.clicked.connect(startOne)
         print("botones de start linkeados")
 
-def startOne():
-    index=int(startButtons.index(widget.sender()))
-    startThread(widget, index)
+def linkEndButtons(endButtons):
+    
+    for i in endButtons:
+        i.clicked.connect(stopOne)#aqui va la funcion para terminarde manera individual   
+    print("botones de terminar linkeados")
 
 
 if __name__ == "__main__":
@@ -56,6 +52,4 @@ if __name__ == "__main__":
     linkEndButtons(endButtons)
     linkStartButtons(startButtons)
     widget.thread={}
-    widget.start_all.clicked.connect(beginAll)
-    widget.stop_all.clicked.connect(endAll)
     sys.exit(app.exec())
