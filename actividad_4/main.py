@@ -24,14 +24,11 @@ def pauseOne():
 
     startButtons[index].setEnabled(True)
 
-    currentStatus = bars[index].value()
 
     if(playButtons[index].text()=="⏸"):
         playButtons[index].setText("▶")
         setFinished(status, index)
         stopThread(widget, index)
-
-        bars[index].setValue(currentStatus)
 
     elif(playButtons[index].text()=="▶"):
         playButtons[index].setText("⏸")
@@ -83,6 +80,8 @@ def linkPlayButtons(playButtons):
     for i in playButtons:
         i.clicked.connect(pauseOne)
     print("botones de play/pause linkeados")
+
+    
 
 
 if __name__ == "__main__":
