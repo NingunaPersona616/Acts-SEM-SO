@@ -14,3 +14,4 @@ def startThread(widget, index):
     QtTest.QTest.qWait(random)#esperamos un determinado tiempo
     widget.thread[index].start()#señalizamos que nuestro hilo iniciara su proceso
     widget.thread[index].any_signal.connect(widget.fcfs)
+    widget.thread[index].enable_signal.connect(widget.enableButton)

@@ -104,9 +104,9 @@
     <widget class="QLabel" name="number_0">
      <property name="geometry">
       <rect>
-       <x>430</x>
+       <x>450</x>
        <y>30</y>
-       <width>81</width>
+       <width>51</width>
        <height>20</height>
       </rect>
      </property>
@@ -117,7 +117,7 @@
       </font>
      </property>
      <property name="text">
-      <string>numero 1</string>
+      <string/>
      </property>
     </widget>
     <widget class="QProgressBar" name="bar_0">
@@ -148,7 +148,7 @@
       </font>
      </property>
      <property name="text">
-      <string>bottom text</string>
+      <string/>
      </property>
     </widget>
    </widget>
@@ -167,9 +167,9 @@
     <widget class="QLabel" name="number_1">
      <property name="geometry">
       <rect>
-       <x>430</x>
+       <x>450</x>
        <y>30</y>
-       <width>81</width>
+       <width>51</width>
        <height>20</height>
       </rect>
      </property>
@@ -180,7 +180,7 @@
       </font>
      </property>
      <property name="text">
-      <string>numero 2</string>
+      <string/>
      </property>
     </widget>
     <widget class="QProgressBar" name="bar_1">
@@ -211,7 +211,7 @@
       </font>
      </property>
      <property name="text">
-      <string>bottom text</string>
+      <string/>
      </property>
     </widget>
    </widget>
@@ -230,9 +230,9 @@
     <widget class="QLabel" name="number_2">
      <property name="geometry">
       <rect>
-       <x>430</x>
+       <x>450</x>
        <y>30</y>
-       <width>81</width>
+       <width>51</width>
        <height>20</height>
       </rect>
      </property>
@@ -243,7 +243,7 @@
       </font>
      </property>
      <property name="text">
-      <string>numero 3</string>
+      <string/>
      </property>
     </widget>
     <widget class="QProgressBar" name="bar_2">
@@ -274,7 +274,7 @@
       </font>
      </property>
      <property name="text">
-      <string>bottom text</string>
+      <string/>
      </property>
     </widget>
    </widget>

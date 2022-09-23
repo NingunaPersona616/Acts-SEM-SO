@@ -6,6 +6,7 @@ class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         uic.loadUi(r"form.ui", self)
+        self.counter=0
 
     def fcfs(self, counter):#processFunction recibira como parametro un contador que sera el que se cargará en la barra de progreso
             cnt=counter#lo igualamos a una variable local
@@ -17,3 +18,8 @@ class MainWindow(QMainWindow):
                 self.bar_1.setValue(cnt)
             if index==2:
                 self.bar_2.setValue(cnt)
+    def enableButton(self, signal):
+        self.counter=self.counter+signal
+        if(self.counter==3):
+            self.startButton.setEnabled(True)
+            self.counter=0
