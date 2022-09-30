@@ -3,16 +3,24 @@ from mainwindow import MainWindow
 from PyQt5.QtWidgets import QApplication
 from threadClass import *
 
-
 CantProcesos = 5
 
 def restartBars():
     for Bar in bars:
         Bar.setValue(0)
 
+    for i in range(CantProcesos):
+        ColaProcesos[i]['status'] = "init"
+
 #FCFS ta hecho con una cola de indices(supestamente) y con barras (pero igual se puede usar los hilos directamente)
 def Prioridades():
     restartBars()   #Reinicia las barras por si se vuelve a llamar
+    
+    priorityQueue=sorted(ColaProcesos, key=lambda d:d['priority'])  #Una vez creada la cola en desorden, se ordena segun la prioridad de los procesos
+
+    for i in range(CantProcesos):   #Se imprime el orden en el que se ejecutaran
+        print(priorityQueue[i])
+
     widget.startButton.setEnabled(False)    #Desactiva boton
 
     while (len(priorityQueue) > 0):  #Mientras no se carguen todas las barras
@@ -41,9 +49,8 @@ def Prioridades():
 def initView(): #Inicializa una lista con los procesos en desorden e inicia la vista
     for i in range(CantProcesos):
         priority = randint(0,2)
-        proceso={"index": i, "status": "init", "priority": priority}
+        proceso={"index": i, "status": "", "priority": priority}
         ColaProcesos.append(proceso)
-
         priorLabels[i].setText(str(priority))
 
 
@@ -79,10 +86,6 @@ if __name__ == "__main__":
     widget.thread={}
 
     initView()
-    priorityQueue=sorted(ColaProcesos, key=lambda d:d['priority'])  #Una vez creada la cola en desorden, se ordena segun la prioridad de los procesos
-
-    for i in range(CantProcesos):   #Se imprime el orden en el que se ejecutaran
-        print(priorityQueue[i])
 
     widget.startButton.clicked.connect(Prioridades)
     widget.closeButton.clicked.connect(closeEvent)
