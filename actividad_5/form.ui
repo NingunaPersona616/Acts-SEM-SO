@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>571</width>
+    <width>594</width>
     <height>465</height>
    </rect>
   </property>
@@ -78,7 +78,7 @@
      <rect>
       <x>420</x>
       <y>65</y>
-      <width>131</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
@@ -97,7 +97,7 @@
      <rect>
       <x>20</x>
       <y>100</y>
-      <width>531</width>
+      <width>551</width>
       <height>80</height>
      </rect>
     </property>
@@ -160,7 +160,7 @@
      <rect>
       <x>20</x>
       <y>190</y>
-      <width>531</width>
+      <width>551</width>
       <height>80</height>
      </rect>
     </property>
@@ -223,7 +223,7 @@
      <rect>
       <x>20</x>
       <y>280</y>
-      <width>531</width>
+      <width>551</width>
       <height>80</height>
      </rect>
     </property>
@@ -305,6 +305,36 @@
     </property>
     <property name="text">
      <string>RR</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>410</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#closeButton{
+
+	background-color: rgb(211, 41, 15);
+
+    color: rgb(240, 240, 240);
+
+    border-radius: 10px;
+
+}
+
+#closeButton:disabled{background-color:black;}
+</string>
+    </property>
+    <property name="text">
+     <string>CERRAR</string>
     </property>
    </widget>
   </widget>

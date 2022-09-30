@@ -2,6 +2,7 @@
 import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow
+from PyQt5 import QtCore
 # Important:
 # You need to run the following command to generate the ui_form.py file
 #     pyside6-uic form.ui -o ui_form.py, or
@@ -12,6 +13,7 @@ class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         uic.loadUi(r"form.ui", self)
+        self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowCloseButtonHint)
 
 
 

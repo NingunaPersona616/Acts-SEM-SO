@@ -2,7 +2,7 @@ import sys
 from mainwindow import MainWindow
 from PyQt5.QtWidgets import QApplication
 from threadClass import *
-from PyQt5 import QtCore
+
 
 CantProcesos = 3
 
@@ -14,6 +14,8 @@ def restartBars():
 def FCFS():
     restartBars()   #Reinicia las barras por si se vuelve a llamar
     widget.startButton.setEnabled(False)    #Desactiva boton
+    widget.startButton_2.setEnabled(False)
+
     index=0
     while (index < len(bars)):  #Mientras no se carguen todas las barras
         QtTest.QTest.qWait(500) #Espera lo que espera la barra de carga o se bugea pq trabajan en contextos diferentes y se desincronizan
@@ -30,10 +32,13 @@ def FCFS():
         
         
     widget.startButton.setEnabled(True)
+    widget.startButton_2.setEnabled(True)
 
 def RR():
     restartBars()
+    widget.startButton.setEnabled(False)    #Desactiva boton
     widget.startButton_2.setEnabled(False)
+
 
     colaProcesos=[{"index": 0, "status": "init"}, {"index": 1, "status": "init"}, {"index": 2, "status": "init"}]
     quantum = 0
@@ -72,13 +77,25 @@ def RR():
             print("jalando")
 
 
+    widget.startButton.setEnabled(True)
     widget.startButton_2.setEnabled(True)
-        
+
+
+def closeEvent():
+    for i in range(len(widget.thread)):
+        widget.thread[i].stop()
+
+    app.quit()
+    widget.close()
+    app.exit()
+    sys.exit()
+    
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     widget = MainWindow()
+    #app.aboutToQuit.connect(closeEvent)
     widget.show()
     bars = [widget.bar_0,
             widget.bar_1,
@@ -88,4 +105,6 @@ if __name__ == "__main__":
     widget.thread={}
     widget.startButton.clicked.connect(FCFS)
     widget.startButton_2.clicked.connect(RR)
+    widget.closeButton.clicked.connect(closeEvent)
+    app.quit()
     sys.exit(app.exec())
