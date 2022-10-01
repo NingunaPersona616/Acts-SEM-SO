@@ -3,13 +3,14 @@ from mainwindow import MainWindow
 from PyQt5.QtWidgets import QApplication
 from PyQt5 import QtCore
 from PyQt5.QtGui import *
-import numpy as np 
+from PyQt5 import QtTest
 
 
 def producers ():
     cont=0
     index=0
     for i in process:
+        QtTest.QTest.qWait(1000)
         i.setText(names[cont])
         use=ramUsage[cont]
         
@@ -20,7 +21,7 @@ def producers ():
             use=use-1
         colorProcess[cont].setStyleSheet(f"background-color: {colors[cont]}")
         cont=cont+1
-
+        
 
 def setColor():
     for i in ram:
@@ -36,9 +37,9 @@ if __name__ == "__main__":
     #inicializa los colores de la ram para que se ponga en gris para dar a entender que no está en uso
     names=["photoshop", "edge", "ableton", "vs-code", "krita", "qemu"]
     ramUsage=[2, 1, 2, 1, 1, 1]
-    colors=["purple", "gree", "red", "blue", "yellow", "cyan"]
+    colors=["purple", "gree", "pink", "blue", "yellow", "cyan"]
     setColor()
-    
+    widget.light_status.setStyleSheet("background-color: red")
     widget.show()
     producers()
     widget.thread={}
