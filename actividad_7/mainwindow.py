@@ -1,6 +1,7 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow
-
+VERDE = 1
+ROJO = 0
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -14,4 +15,9 @@ class MainWindow(QMainWindow):
             if index==0:
                 self.bar_0.setValue(cnt)
 
+    def semaforo(self, status):
+        if(status==VERDE):
+            self.light_status.setStyleSheet("background-color: rgb(0, 255, 0)")
+        elif(status == ROJO):
+            self.light_status.setStyleSheet("background-color: rgb(255, 0, 0)")
 

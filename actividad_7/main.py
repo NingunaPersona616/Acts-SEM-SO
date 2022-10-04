@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5 import QtCore
 from PyQt5.QtGui import *
 from PyQt5 import QtTest
-
+from threadClass import *
 
 def producers ():
     cont=0
@@ -26,6 +26,39 @@ def producers ():
 def setColor():
     for i in ram:
         i.setStyleSheet("background-color: gray")
+
+def FCFS():
+    #restartBars()   #Reinicia las barras por si se vuelve a llamar
+    
+    priorityQueue=sorted(ColaProcesos, key=lambda d:d['priority'])  #Una vez creada la cola en desorden, se ordena segun la prioridad de los procesos
+
+    for i in range(CantProcesos):   #Se imprime el orden en el que se ejecutaran
+        print(priorityQueue[i])
+
+    widget.startButton.setEnabled(False)    #Desactiva boton
+
+    while (len(priorityQueue) > 0):  #Mientras no se carguen todas las barras
+        QtTest.QTest.qWait(500) #Espera lo que espera la barra de carga o se bugea pq trabajan en contextos diferentes y se desincronizan
+        app.processEvents() #funcion pa que no se freezie la GUI con el while
+
+        index = priorityQueue[0]['index']   #Toma el primer elemento de la cola ordenada por prioridades
+        print('Thread: ', index, "Status: ", priorityQueue[0]['status'], 'value: ', bars[index].value())
+        
+        if(bars[index].value()==100):   #Si el proceso esta al 100% se kickea de la cola y se detiene
+            stopThread(widget, index)
+            priorityQueue[0]['status'] = "finished"
+            priorityQueue.pop(0)
+
+        elif(priorityQueue[0]['status'] == "init"):   #Si el proceso no esta iniciada ps lo inicia (?)
+            startThread(widget, index)
+            priorityQueue[0]['status'] = "running"
+        
+        elif(priorityQueue[0]['status'] == "running"):   #Si el proceso se esta corriendo, pues sigue corriendo
+            #print("jalando")
+            pass
+        
+    #widget.startButton.setEnabled(True)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
