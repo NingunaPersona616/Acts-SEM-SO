@@ -35,14 +35,15 @@ class threadClass(QtCore.QThread):#la clase threadClass generará un objeto que 
             QtTest.QTest.qWait(500)#esperamos otros segundos random
             if cnt==100:#si la barra llega a 100 saldra de la subrutina del while
                 self.any_signal.emit(cnt)
-                self.stop()
-                self.sem_signal.emit(VERDE)
+                #self.stop()
+                
                 
 
     def stop(self):
         self.terminate=True
         self.is_running=False
         print(f"stopping thread: {self.index}")
+        self.sem_signal.emit(VERDE)
 
 def stopThread(widget, index):
     widget.thread[index].stop()
@@ -52,7 +53,6 @@ def currentValues(widget, index):
     return value
 
 def startThread(widget, index):
-    print('De perdida entra aqui?')
     random=randint(10, 500)
     value=currentValues(widget, index)
     widget.thread[index]=threadClass(parent=None, index=index, value=value)#asignamos a una posicion del arreglo un objeto de la clase threadClass que seran nuestros hilos y el objeto adquiere en su atributo index su posicion dentro del arreglo a manera de identificacion
