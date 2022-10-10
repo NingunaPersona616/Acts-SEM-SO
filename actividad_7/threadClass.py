@@ -58,5 +58,5 @@ def startThread(widget, index):
     widget.thread[index]=threadClass(parent=None, index=index, value=value)#asignamos a una posicion del arreglo un objeto de la clase threadClass que seran nuestros hilos y el objeto adquiere en su atributo index su posicion dentro del arreglo a manera de identificacion
     QtTest.QTest.qWait(random)#esperamos un determinado tiempo
     widget.thread[index].start()#señalizamos que nuestro hilo iniciara su proceso
-    widget.thread[index].any_signal.connect(widget.taskManager)#
+    widget.thread[index].any_signal.connect(widget.taskManager)
     widget.thread[index].sem_signal.connect(widget.semaforo)

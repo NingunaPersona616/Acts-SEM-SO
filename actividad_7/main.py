@@ -80,7 +80,7 @@ def FCFS():
             ColaProcesos[0]['status'] = "running"
         
         elif(ColaProcesos[0]['status'] == "running"):   #Si el proceso se esta corriendo, pues sigue corriendo y el semaforo se mantiene en rojo
-            #print("jalando")
+            
             pass
         
     #widget.startButton.setEnabled(True)
