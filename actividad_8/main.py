@@ -52,6 +52,7 @@ def write():
 
 
 if __name__ == "__main__":
+    
     app = QApplication(sys.argv)
     widget = MainWindow()
     readers=[widget.reader_0, widget.reader_1]
