@@ -30,6 +30,7 @@ def read():
         for i in used_by:
             i.setText(readers[counter].text())
             counter=counter+1
+        widget.alert.setText("")
         widget.status.setText("En lectura")
         widget.available.setText("No")
         widget.read.setEnabled(False)
