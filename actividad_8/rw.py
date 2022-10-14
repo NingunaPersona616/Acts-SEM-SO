@@ -9,7 +9,7 @@ def stopThread(widget, index):
 
 def stopAll(widget):
     index=0
-    if(len(widget.thread)):
+    if(len(widget.thread)>1):
         while(index<2):
             widget.thread[index].stop()
             index=index+1

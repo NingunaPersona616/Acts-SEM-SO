@@ -21,4 +21,5 @@ class MainWindow(QMainWindow):
     def enable(self, flag):
         if(flag==0):
             self.write.setEnabled(True)
+            self.available.setText("Si")
 
