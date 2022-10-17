@@ -25,4 +25,7 @@ def startThread(widget, index, id):
     widget.thread[index].start()#señalizamos que nuestro hilo iniciara su proceso
     widget.thread[index].any_signal.connect(widget.task)#
     widget.thread[index].semaforo.connect(widget.end)#
-    widget.thread[index].enable.connect(widget.enable)
+    widget.thread[index].enable.connect(widget.enable)#
+
+
+

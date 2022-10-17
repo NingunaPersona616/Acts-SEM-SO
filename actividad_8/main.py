@@ -1,6 +1,5 @@
 from concurrent.futures import thread
 import sys
-from tracemalloc import start
 from mainwindow import MainWindow
 from PyQt5.QtWidgets import QApplication
 from PyQt5 import QtCore
@@ -49,10 +48,11 @@ def write():
     widget.used_by_0.setText("Escritor")
     widget.used_by_1.setText("")
     startThread(widget, 1, 1)
+    
 
 
 if __name__ == "__main__":
-    
+
     app = QApplication(sys.argv)
     widget = MainWindow()
     readers=[widget.reader_0, widget.reader_1]
