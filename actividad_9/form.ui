@@ -610,7 +610,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QProgressBar" name="bar">
+   <widget class="QProgressBar" name="bar_0">
     <property name="geometry">
      <rect>
       <x>10</x>
