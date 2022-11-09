@@ -156,7 +156,7 @@
     <widget class="QLabel" name="fileName">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>60</y>
        <width>91</width>
        <height>18</height>
@@ -169,9 +169,9 @@
     <widget class="QLabel" name="fileSize">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>180</x>
        <y>60</y>
-       <width>71</width>
+       <width>91</width>
        <height>18</height>
       </rect>
      </property>

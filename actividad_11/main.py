@@ -1,10 +1,12 @@
 import sys
 from mainwindow import MainWindow
 from PyQt5.QtWidgets import QApplication
-from PyQt5 import QtCore
+from PyQt5 import QtTest
 from iod import *
+import os
 
 def init():
+    
     widget.printButton.clicked.connect(printFile)
     widget.saveButton.clicked.connect(saveFile)
     for i in ram:
@@ -18,6 +20,10 @@ def init():
     widget.process0.setText("Archivo")
     widget.process1.setText("impresion")
     widget.process2.setText("guardado")
+    f = open("doc.txt", "r")
+    text=f.read() 
+    widget.buffer.setText(f"{text}")
+    f.close()
 
 def printFile():
     widget.printStatus.setText("imprimiendo...")
@@ -26,9 +32,22 @@ def printFile():
     widget.printButton.setEnabled(False)
 
 def saveFile():
-    print("Guardando archivo")
-    pass
-
+    widget.saveButton.setEnabled(False)
+    widget.diskStatus.setText("Escribiendo en disco...")
+    widget.slot2.setStyleSheet("background-color: pink")
+    text=widget.buffer.toPlainText()
+    file = open("doc.txt", "w")
+    file.write(f"{text}")
+    file.close()
+    QtTest.QTest.qWait(2000)
+    fileName = "doc.txt"
+    fileStats = os.stat(fileName)
+    widget.fileName.setText("doc.txt")
+    widget.fileSize.setText(f"{fileStats.st_size} KiB")
+    QtTest.QTest.qWait(3000)
+    widget.saveButton.setEnabled(True)
+    widget.diskStatus.setText("Nada por escribir en disco")
+    widget.slot2.setStyleSheet("background-color: gray")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
