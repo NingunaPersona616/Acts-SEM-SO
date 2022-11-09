@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>670</width>
+    <width>752</width>
     <height>433</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    <widget class="QTextEdit" name="buffer">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>90</y>
       <width>211</width>
       <height>161</height>
@@ -27,7 +27,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>210</x>
       <y>10</y>
       <width>261</width>
       <height>31</height>
@@ -40,7 +40,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>60</y>
       <width>221</width>
       <height>18</height>
@@ -53,9 +53,9 @@
    <widget class="QPushButton" name="printButton">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>260</y>
-      <width>86</width>
+      <x>10</x>
+      <y>280</y>
+      <width>91</width>
       <height>26</height>
      </rect>
     </property>
@@ -66,9 +66,9 @@
    <widget class="QPushButton" name="saveButton">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>150</y>
-      <width>86</width>
+      <x>130</x>
+      <y>280</y>
+      <width>91</width>
       <height>26</height>
      </rect>
     </property>
@@ -79,7 +79,7 @@
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>80</y>
       <width>210</width>
       <height>3</height>
@@ -92,9 +92,9 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>80</x>
       <y>320</y>
-      <width>81</width>
+      <width>90</width>
       <height>20</height>
      </rect>
     </property>
@@ -105,7 +105,7 @@
    <widget class="QProgressBar" name="printBar">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>360</y>
       <width>211</width>
       <height>23</height>
@@ -118,7 +118,7 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>369</x>
+      <x>439</x>
       <y>280</y>
       <width>281</width>
       <height>131</height>
@@ -183,7 +183,7 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>440</x>
       <y>100</y>
       <width>280</width>
       <height>61</height>
@@ -192,7 +192,7 @@
     <property name="title">
      <string>RAM</string>
     </property>
-    <widget class="QLabel" name="slot1">
+    <widget class="QLabel" name="slot0">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -205,7 +205,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="slot2">
+    <widget class="QLabel" name="slot1">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -218,7 +218,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="slot3">
+    <widget class="QLabel" name="slot2">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -261,10 +261,10 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>220</y>
+      <x>440</x>
+      <y>190</y>
       <width>71</width>
-      <height>18</height>
+      <height>28</height>
      </rect>
     </property>
     <property name="text">
@@ -274,10 +274,10 @@
    <widget class="QLabel" name="diskStatus">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>220</y>
+      <x>510</x>
+      <y>190</y>
       <width>211</width>
-      <height>20</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -287,7 +287,7 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>440</x>
       <y>60</y>
       <width>71</width>
       <height>18</height>
@@ -300,7 +300,7 @@
    <widget class="QLabel" name="ramStatus">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>510</x>
       <y>59</y>
       <width>211</width>
       <height>20</height>
@@ -313,7 +313,7 @@
    <widget class="Line" name="line_4">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>340</y>
       <width>210</width>
       <height>3</height>
@@ -322,6 +322,123 @@
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Estatus:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="printStatus">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>400</y>
+      <width>181</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>60</y>
+      <width>170</width>
+      <height>190</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Procesos en RAM</string>
+    </property>
+    <widget class="QLabel" name="color0">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>21</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="color1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>21</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="color2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>21</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="process0">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>111</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="process1">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>90</y>
+       <width>111</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="process2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>140</y>
+       <width>111</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
